@@ -3,8 +3,8 @@
 <a href="<? URLROOT; ?>posts" class="btn btn-light"> <i class="fa fa-backward"></i> Back</a>
 <div class="col-md-6 mx-auto">
     <div class="card card-body bg-light mt-5">
-        <h2>Add Post</h2>
-        <p>Create a post</p>
+        <h2>Add Complaint</h2>
+        <p>Create a new Complaint</p>
         <form action="<?= URLROOT ?>posts/add" method="post">
             <div class="form-group">
                 <label for="title">Title <sup>*</sup></label>
