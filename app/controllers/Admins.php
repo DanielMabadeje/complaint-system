@@ -19,18 +19,19 @@ class Admins extends Controller
         $data = [
             'posts' => $posts,
         ];
-        $this->view('posts/index', $data);
+        $this->view('admins/posts/index', $data);
     }
     public function show($id)
     {
         $post = $this->postModel->show($id);
-        
+        $comments=$this->postModel->getPostsComments($id);
         $user = $this->userModel->getUserbyId($post->user_id);
         $data = [
             'post' => $post,
             'user' => $user,
+            'comments' => $comments,
         ];
-        $this->view('posts/show', $data);
+        $this->view('admins/posts/show', $data);
     }
     
     public function delete($id)
@@ -47,5 +48,10 @@ class Admins extends Controller
         } else {
             redirect('posts');
         }
+    }
+
+    public function addcomment($id)
+    {
+        # code...
     }
 }

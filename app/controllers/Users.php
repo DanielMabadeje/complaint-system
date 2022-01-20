@@ -157,10 +157,14 @@ class Users extends Controller
         $_SESSION['email'] = $user->email;
         $_SESSION['user_name'] = $user->name;
         $_SESSION['is_admin'] = $user->is_admin;
-        if ($user->is_admin ==1 ) {
+        // var_dump($user);
+        // die;
+        if ($user->is_admin == 1 ) {
             redirect('admins');
+        }else{
+            redirect('complaints');
         }
-        redirect('complaints');
+        
 
         
     }

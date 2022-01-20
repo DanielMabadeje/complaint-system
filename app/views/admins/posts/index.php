@@ -1,12 +1,13 @@
 <?php require APPROOT . '/views/inc/header.php';?>
 <div class="row">
     <div class="col-md-6">
-        <h1>Complaints</h1>
+
+        <h1>Admin Dashboard</h1>
+
+        <!-- <h3>Complaints</h3> -->
     </div>
     <div class="col-md-6">
-        <a href="<?=URLROOT;?>/complaints/add" class="btn btn-primary pull-right">
-            <i class="fa fa-pencil"></i>Add Complaint
-        </a>
+        <h3>Complaints</h3>
     </div>
 </div>
 <?php flash('post_message');?>

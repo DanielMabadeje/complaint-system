@@ -21,9 +21,11 @@ class Complaints extends Controller
     {
         $post = $this->postModel->show($id);
         $user = $this->userModel->getUserbyId($post->user_id);
+        $comments=$this->postModel->getPostsComments($id);
         $data = [
             'post' => $post,
-            'user' => $user
+            'user' => $user,
+            'comments' => $comments,
         ];
         $this->view('posts/show', $data);
     }
