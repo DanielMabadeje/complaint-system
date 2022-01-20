@@ -157,7 +157,10 @@ class Users extends Controller
         $_SESSION['email'] = $user->email;
         $_SESSION['user_name'] = $user->name;
         $_SESSION['is_admin'] = $user->is_admin;
-        // redirect('posts');
+        if ($user->is_admin ==1 ) {
+            redirect('admins');
+        }
+        redirect('complaints');
 
         
     }
@@ -166,6 +169,7 @@ class Users extends Controller
         unset($_SESSION['user_id']);
         unset($_SESSION['user_email']);
         unset($_SESSION['user_name']);
+        unset($_SESSION['is_admin']);
         session_destroy();
         redirect('users/login');
     }
