@@ -26,4 +26,35 @@
     <a href="<?= URLROOT; ?>posts/" class="btn btn-dark">Back</a>
 </div>
 
+<div class="row">
+    <div class="col-md-6 mr-auto">
+        <div class="card card-body bg-light mt-5">
+            <h2>Comments</h2>
+            <div>
+                <?php foreach ($data['comments'] as $comment): ?>
+                    <div class="card card-body p-2 mt-2">
+                        <h4><?= $comment->comment ?></h4>
+                    </div>
+                <?php endforeach;?>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 ml-auto">
+        <div class="card card-body bg-light mt-5">
+            <h2>Add Comment</h2>
+            <p>Create a new Comment</p>
+            <form action="<?= URLROOT ?>admins/addcomment/<?= $data['post']->id?>" method="post">
+
+                <div class="form-group">
+                    <label for="body">  Comment <sup>*</sup></label>
+                    <textarea type="text" name="comment" class="form-control form-control-lg <?= (!empty($data['body_err'])) ? 'is-invalid' : ''; ?>" value="<?= $data['body']; ?>"> </textarea>
+                    <span class="invalid-feedback"><?= $data['body_err']; ?></span>
+                </div>
+                <input type="submit" class="btn btn-success" value="Submit">
+            </form>
+        </div>
+    <!-- </div> -->
+</div>
+</div>
+
 <?php require APPROOT . '/views/inc/footer.php'; ?>

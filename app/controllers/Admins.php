@@ -52,6 +52,31 @@ class Admins extends Controller
 
     public function addcomment($id)
     {
-        # code...
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+            $data = [
+                
+                'comment' => trim($_POST['comment']),
+                'id' => $id,
+                'comment_err'=>''
+            ];
+
+            
+            if (empty($data['comment'])) {
+                $data['comment_err'] = 'Please enter body text';
+            }
+
+            if (empty($data['comment_err'])) {
+                // die('success');
+                if ($this->postModel->addComment($data)) {
+                    flash('post_message', 'Comment Added');
+                    redirect('admins/show/'.$id);
+                } else {
+                    die('somethin went wrong');
+                }
+            } else {
+                $this->view('admins/posts/show', $data);
+            }
+        } 
     }
 }

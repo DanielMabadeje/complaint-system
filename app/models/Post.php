@@ -60,7 +60,6 @@ class Post
         $this->db->query('INSERT INTO complaints_comments (complaint_id, comment) VALUES(:id, :comment)');
         $this->db->bind(':id', $data['id']);
         $this->db->bind(':comment', $data['comment']);
-        $this->db->bind(':body', $data['body']);
 
         if ($this->db->execute()) {
             return true;

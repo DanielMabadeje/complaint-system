@@ -27,7 +27,7 @@
 ?>
         </div>
         <p class="card-text"><?=$post->body;?> </p>
-        <a href="<?=URLROOT;?>complaints/show/<?=$post->postId;?>" class="btn btn-dark">Read More</a>
+        <a href="<?=URLROOT;?>admins/show/<?=$post->postId;?>" class="btn btn-dark">Read More</a>
     </div>
 
 <?php endforeach;?>
