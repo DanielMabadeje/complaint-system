@@ -156,7 +156,10 @@ class Users extends Controller
         $_SESSION['user_id'] = $user->id;
         $_SESSION['email'] = $user->email;
         $_SESSION['user_name'] = $user->name;
-        redirect('posts');
+        $_SESSION['is_admin'] = $user->is_admin;
+        // redirect('posts');
+
+        
     }
     public function logout()
     {

@@ -36,3 +36,12 @@ function isLoggedIn()
         return false;
     }
 }
+
+function isAdmin()
+{
+    if (isset($_SESSION['user_id']) && $_SESSION['is_admin']==1) {
+        return true;
+    }else{
+        return false;
+    }
+}

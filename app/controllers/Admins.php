@@ -6,6 +6,10 @@ class Admins extends Controller
         if (!isLoggedIn()) {
             redirect('users/login');
         }
+
+        if (!isAdmin()) {
+            redirect('complaints');
+        }
         $this->postModel = $this->model('Post');
         $this->userModel = $this->model('User');
     }
