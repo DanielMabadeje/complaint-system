@@ -28,4 +28,13 @@ class Pages extends Controller
         ];
         $this->view('pages/index', $data);
     }
+
+    public function faq()
+    {
+        $data = [
+            'title' => 'Complaint System',
+            'description' => "A simple Bank complaint system to help serve customers better",
+        ];
+        $this->view('pages/faq', $data);
+    }
 }
