@@ -145,7 +145,7 @@
   font-weight: 500;
 }
 
-/* LOGIN FORM */
+/* REGISTRATION FORM */
 header .header{
   background-color: #fff;
   height: 45px;
@@ -156,13 +156,13 @@ header a img{
   margin-top: 4px;
 }
 
-.login-page{
+.registration-page{
   width: 360px;
   padding: 15% 0 0;
   margin: auto;
 }
 
-.login-page .form .login{
+.registration-page .form .register{
   margin-top: -31px;
   margin-bottom: 26px;
 }
@@ -246,6 +246,7 @@ header a img{
   }
 }
 
+
 /* @media (max-width: 700px) {
   nav .sidebar-button .dashboard,
   nav .profile-details .admin_name,
@@ -253,5 +254,5 @@ header a img{
     display: none;
   }
   
+ 
 } */
-

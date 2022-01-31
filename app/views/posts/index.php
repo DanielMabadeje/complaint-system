@@ -1,5 +1,7 @@
 <?php require APPROOT . '/views/inc/header.php';?>
-<div class="row">
+<!-- <div classs=" home-section"> -->
+
+<div class="row home-section">
     <div class="col-md-6">
         <h1>Complaints</h1>
     </div>
@@ -11,7 +13,7 @@
 </div>
 <?php flash('post_message');?>
 <?php foreach ($data['posts'] as $post): ?>
-    <div class="card card-body mb-3">
+    <div class="card card-body mb-3  home-section">
         <h4 class="card-title">
             <?=$post->title;?>
         </h4>
@@ -28,6 +30,8 @@
         <p class="card-text"><?=$post->body;?> </p>
         <a href="<?=URLROOT;?>complaints/show/<?=$post->postId;?>" class="btn btn-dark">Read More</a>
     </div>
+
+<!-- </div> -->
 
 <?php endforeach;?>
 <?php require APPROOT . '/views/inc/footer.php';?>

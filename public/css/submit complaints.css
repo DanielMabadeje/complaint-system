@@ -156,13 +156,13 @@ header a img{
   margin-top: 4px;
 }
 
-.login-page{
+.complaint-page{
   width: 360px;
   padding: 15% 0 0;
   margin: auto;
 }
 
-.login-page .form .login{
+.complaint-page .form .complaint{
   margin-top: -31px;
   margin-bottom: 26px;
 }
@@ -245,13 +245,3 @@ header a img{
     left: 220px;
   }
 }
-
-/* @media (max-width: 700px) {
-  nav .sidebar-button .dashboard,
-  nav .profile-details .admin_name,
-  nav .profile-details i{
-    display: none;
-  }
-  
-} */
-
