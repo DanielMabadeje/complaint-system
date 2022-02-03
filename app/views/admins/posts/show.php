@@ -1,4 +1,6 @@
 <?php require APPROOT . '/views/inc/header.php';?>
+<div class="home-section">
+
 <div class="card card-body mb-3">
     <h4 class="card-title">
         <?=$data['post']->title;?>
@@ -56,4 +58,6 @@
 </div>
 </div>
 
+
+</div>
 <?php require APPROOT . '/views/inc/footer.php';?>

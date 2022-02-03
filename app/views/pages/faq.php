@@ -1,4 +1,4 @@
-<?php require APPROOT . '/views/inc/header.php';?>
+<?php require APPROOT . '/views/inc/headerwtside.php';?>
 
 <div>
     <h2 class="display-3">FAQ</h2>
@@ -45,4 +45,6 @@
         </div>
     </div>
 
+
+    
 <?php require APPROOT . '/views/inc/footer.php';?>
